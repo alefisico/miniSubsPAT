@@ -18,6 +18,12 @@ options.register ('globalTag',
                   VarParsing.varType.string,
                   'Overwrite defaul globalTag')
 
+options.register ('skip',
+                  0,
+                  VarParsing.multiplicity.singleton,
+                  VarParsing.varType.int,
+                  'Number of events to skip')
+
 options.parseArguments()
 print options
 
@@ -34,8 +40,9 @@ process.GlobalTag.globaltag = options.globalTag
 ###################################
 ###### Input                   ####
 ###################################
-process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(-1))
+process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(options.maxEvents))
 process.load('miniPAT.miniSubsPAT.miniSubsPAT_cfi')
+process.source.skipEvents = cms.untracked.uint32( options.skip ) 
 #process.source = cms.Source("PoolSource",
 		#fileNames = cms.untracked.vstring( 'file:/eos/uscms/store/user/algomez/RPVSt100tojj_8TeV_HT500/RPVSt100tojj_8TeV_HT500_8/aodsim/RPVSt100tojj_8TeV_HT500_8_PU_532_204_aodsim.root' ),
 #)
