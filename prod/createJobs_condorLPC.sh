@@ -88,7 +88,7 @@ echo ' #############################################################'
 echo ' ########### TESTING BEFORE SENDING TO CRAB          #########'
 echo ' #############################################################'
 
-#cmsRun ${namePythonFile} outputFile=test.root maxEvents=1
+cmsRun ${namePythonFile} outputFile=test.root maxEvents=1
 
 echo ' #############################################################'
 echo ' ########### END OF TEST, IF NO ERROR CONTINUE       #########'
