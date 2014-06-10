@@ -85,14 +85,6 @@ cp ${namePythonFileCFI} ${Main_Dir}../python/
 sed -i 's/miniSubsPAT_cfi/'"${Name}"'_miniSubsPAT_cfi/' ${namePythonFile}
 
 echo ' #############################################################'
-echo ' ##### Compiling again                                  ######'
-echo ' #############################################################'
-cd ${FWR_Dir}
-scramv1 b -j8
-cd ${Working_Dir}
-
-
-echo ' #############################################################'
 echo ' ########### TESTING BEFORE SENDING TO CRAB          #########'
 echo ' #############################################################'
 
