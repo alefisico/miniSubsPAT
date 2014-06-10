@@ -1,4 +1,4 @@
-<library   file="*.cc" name="jetSubsMyJetSubsAnalyzerPlugins">
+<library   file="*.cc" name="miniPATminiSubsPATPlugins">
 <use   name="root"/> 
 <use   name="rootrflx"/>
 <use   name="rootcore"/>
