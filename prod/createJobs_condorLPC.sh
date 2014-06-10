@@ -28,7 +28,8 @@ numJobs=400					#### The more, the better
 totalNumberEvents=100000			#### if you don't know exactly the number, give a big number, you will end up with empty root files but it's ok
 Energy=13000
 
-Main_Dir=/uscms_data/d3/algomez/Substructure/miniPAT/CMSSW_5_3_12/src/miniPAT/miniSubsPAT/prod/			# Main Dir
+FWR_Dir=/uscms_data/d3/algomez/Substructure/miniPAT/CMSSW_5_3_12/src/	## Where your environment is
+Main_Dir=${FWR_Dir}/miniPAT/miniSubsPAT/prod/			# Main Dir
 Name=RPVSt100tojj_8TeV_HT500
 #Name=RPVSt${stop1}tojj_8TeV_HT500		 						# Example how to use the stop1 parameters
 input_Dir=/eos/uscms/store/user/algomez/RPVSt100tojj_8TeV_HT500/RPVSt100tojj_8TeV_HT500_9/aodsim/		# input directory, where your aod files are.
@@ -112,8 +113,9 @@ source /uscmst1/prod/sw/cms/setup/shrc prod
 
 #---------------------------------------------------------------
 
-cd '${Working_Dir}'
+cd '${FWR_Dir}'
 eval `scramv1 runtime -sh`
+cd '${Working_Dir}'
 cmsRun '${namePythonFile}' outputFile=$1 maxEvents=$2 skip=$3
 '>> ${runFile}
 
