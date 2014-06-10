@@ -1,6 +1,6 @@
 ######## JETS  CA8 ----------------------------
 import FWCore.ParameterSet.Config as cms
-from jetSubs.MyJetSubsAnalyzer.PAT_goodPV_cff import *
+from miniPAT.miniSubsPAT.PAT_goodPV_cff import *
 
 ############################################## NO GROOMING
 from RecoJets.JetProducers.ca4PFJets_cfi import ca4PFJets

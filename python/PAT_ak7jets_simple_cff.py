@@ -1,6 +1,6 @@
 ######## JETS  AK7 ----------------------------
 import FWCore.ParameterSet.Config as cms
-from jetSubs.MyJetSubsAnalyzer.PAT_goodPV_cff import *
+from miniPAT.miniSubsPAT.PAT_goodPV_cff import *
 
 ############################################## NO GROOMING
 from RecoJets.JetProducers.ak5PFJets_cfi import ak5PFJets
